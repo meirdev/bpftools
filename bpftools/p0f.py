@@ -80,7 +80,7 @@ class P0fBPF:
         if self.ver != '4' and self.ver != '6':
             raise ValueError("IP version must be either 4 or 6")
 
-        if not re.match("^(\d+)(-|\+\d+)?$", self.ittl):
+        if not re.match("^(\d+)(-|\+\d+|\+\?)?$", self.ittl):
             raise ValueError("Invalid ttl field")
         self.parse_ittl()
 
